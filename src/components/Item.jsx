@@ -5,8 +5,9 @@ export function Item({ emoji }) {
 
 	return (
 		<li className='item'>
-			<span>{emoji}</span>
+			<span className='emoji'>{emoji}</span>
 			<button
+				className='btn'
 				onClick={() => {
 					setZoomed(wasZoomed => !wasZoomed);
 				}}
