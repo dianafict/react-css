@@ -1,5 +1,5 @@
 import { Item } from "../Item/Item";
-import "./List.module.css";
+import styles from "./List.module.css";
 
 const emojis = ["🚀", "🎶", "🎁", "🎉", "✨"];
 
