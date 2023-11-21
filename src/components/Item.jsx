@@ -7,6 +7,7 @@ export function Item({ emoji }) {
 		<li className='item'>
 			<span className={`emoji ${zoomed ? "zoomed" : ""}`}>{emoji}</span>
 			<button
+				style={{ background: "blue", border: "5px solid yellow" }}
 				className='btn'
 				onClick={() => {
 					setZoomed(wasZoomed => !wasZoomed);
