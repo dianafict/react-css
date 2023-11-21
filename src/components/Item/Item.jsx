@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./Item.module.css";
+// import "./Item.module.css";
+import styles from "./Item.module.css";
 
 export function Item({ emoji }) {
 	const [zoomed, setZoomed] = useState(false);
@@ -8,10 +9,19 @@ export function Item({ emoji }) {
 
 	// wersja zwykla jsx - className='btn'
 	// wersja modules - className={styles.btn}
+	// className={styles['btn-big']}
+	// styles.btnRed
 
 	return (
-		<li className='item'>
-			<span className={`emoji ${zoomed ? "zoomed" : ""}`}>{emoji}</span>
+		<li
+			// className='item'
+			className={styles.item}
+		>
+			{/* <span className={`emoji ${zoomed ? "zoomed" : ""}`}>{emoji}</span> */}
+
+			<span className={`${styles.emoji} ${zoomed ? styles.zoomed : ""}`}>
+				{emoji}
+			</span>
 
 			<button
 				// style={{ background: "blue", border: "5px solid yellow" }}
